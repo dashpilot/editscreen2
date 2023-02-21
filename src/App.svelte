@@ -134,7 +134,8 @@ function onlyUnique(value, index, self) {
 
 function save(){
 
-	window.render(data);
+	const event = new CustomEvent("update", { detail: data });
+	document.body.dispatchEvent(event);
 	item = false;
 
 }
