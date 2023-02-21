@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap');
+
+:root {
+  --bg-color: #F7FAFC;
+  --fg-color: #000000;
+}
+
+.container{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section h1, section h2, section h3, section h4{
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+section h1, section h2{
+  font-size: 45px;
+  line-height: 45px;
+}
+
+section h3{
+  margin-top: 20px;
+  font-size: 35px;
+  line-height: 35px;
+}
+
+section h1{
+  margin-bottom: 10px;
+}
+
+section h2{
+  margin-bottom: 25px;
+}
+
+section{
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4f5c65;
+}
+
+section{
+  padding: 25px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+section:nth-child(odd) h1,
+section:nth-child(odd) h2,
+section:nth-child(odd) h3,
+section:nth-child(odd) p,
+section:nth-child(odd) .fas{
+  color: var(--fg-color);
+}
+
+section:nth-child(odd){
+  background-color: var(--bg-color);
+}
+
+.btn-secondary{
+  font-family: "Rubik", sans-serif;
+  border: 1px solid #000;
+  font-size: 20px;
+  padding: 8px 25px 8px 25px;
+  margin-top: 25px;
+  background-color: transparent;
+}
+
+.btn-secondary:hover{
+  border: 1px solid #999;
+  background-color: transparent;
+}
+
+#content:nth-child(odd) .btn-secondary{
+  color: var(--fg-color);
+  border-color: color: var(--fg-color);
+}
+
+.fa-big{
+  font-size: 45px;
+  margin-bottom: 15px;
+}
