@@ -16,14 +16,14 @@ function insertBlock(layout){
   item.title = 'Lorem Ipsum';
   item.body = '';
   item.layout = layout;
-  if(cfg.page){
-    item.page = cfg.page;
+  if(cfg.category){
+    item.category = cfg.category;
   }else{
-    var mypage = window.location.pathname.replace('/', '');
-    if(mypage==''){
-      item.page = 'home';
+    var mycat = window.location.pathname.replace('/', '');
+    if(mycat==''){
+      item.category = 'home';
     }else{
-      item.page = window.location.pathname.replace('/', '');
+      item.category = window.location.pathname.replace('/', '');
     }
     
   }
