@@ -182,7 +182,7 @@ function groupByKey(array, key) {
 {#each cfg.layouts as type}
 <div class="tab-{layout} wdgt-tab" style="display: none;">
 
-<h5 class="text-capitalize">{layout}</h5>
+<h5 class="text-capitalize">{type}</h5>
 
 <ul class="list-group mt-1 mb-4">
 	{#each data.posts as item, i}
