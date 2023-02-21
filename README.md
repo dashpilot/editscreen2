@@ -31,12 +31,9 @@ The data-fields attribute contains key value pairs where the first is the name o
 To install the editor, add the following code to the head of each page:
 
 ```
-<link rel='stylesheet' href='https://editscreen.vercel.app/global.css'>
-<link rel='stylesheet' href='https://editscreen.vercel.app/build/bundle.css'>
-<script defer src='https://editscreen.vercel.app/build/bundle.js'></script>
-<script>
-    window.page = 'home'; // pass the name of the current page to the editor
-</script>
+<link rel='stylesheet' href='https://editscreen2.vercel.app/global.css'>
+<link rel='stylesheet' href='https://editscreen2.vercel.app/build/bundle.css'>
+<script defer src='https://editscreen2.vercel.app/build/bundle.js'></script>
 ```
 
 ## Configuration
@@ -79,11 +76,11 @@ function render(data) {
 }
 ```
 
-## Demo
-
-https://editscreen.vercel.app
-
-## Updates
+## Updates - 2-2023
 
 1. the variable window.category should now always be updated by the router. It is used by the CMS
 2. the website should listen for the "update" even on the body, to update the data
+
+## Demo
+
+https://editscreen2.vercel.app
