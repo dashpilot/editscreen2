@@ -179,7 +179,7 @@ function groupByKey(array, key) {
 
 {#if cfg.settings && cfg.settings.includes("layouts")}
 
-{#each cfg.layouts as layout}
+{#each cfg.layouts as type}
 <div class="tab-{layout} wdgt-tab" style="display: none;">
 
 <h5 class="text-capitalize">{layout}</h5>
@@ -187,7 +187,7 @@ function groupByKey(array, key) {
 <ul class="list-group mt-1 mb-4">
 	{#each data.posts as item, i}
 
-{#if item.layout==layout}
+{#if item.type==type}
 
 		<li class="list-group-item">
 
