@@ -55,7 +55,6 @@ cfg.buttons = ['add', 'design', 'settings', 'publish']; // which buttons should 
 cfg.layoutPreview = 'png'; // preview images in `/assets/layouts`, remove if you don't want a preview
 cfg.settings = ['layouts']; // which settings should be displayed on the `settings` screen
 cfg.layouts = ['banner', 'post', 'features', 'featured', 'news'];
-cfg.page = window.page; // used to keep track of the current page
 cfg.rte = ['h1', 'h2', 'h3'] // add buttons to the rich text editor
 ```
 
@@ -83,3 +82,8 @@ function render(data) {
 ## Demo
 
 https://editscreen.vercel.app
+
+## Updates
+
+1. the variable window.category should now always be updated by the router. It is used by the CMS
+2. the website should listen for the "update" even on the body, to update the data
