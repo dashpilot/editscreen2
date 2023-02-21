@@ -16,9 +16,9 @@ function insertBlock(layout){
   item.title = 'Lorem Ipsum';
   item.body = '';
   item.layout = layout;
-  if(cfg.category){
-    item.category = cfg.category;
-  }else{
+
+
+  
     var mycat = window.location.pathname.replace('/', '');
     if(mycat==''){
       item.category = 'home';
@@ -26,11 +26,13 @@ function insertBlock(layout){
       item.category = window.location.pathname.replace('/', '');
     }
     
-  }
+
 
   console.log(item);
-  data.entries.unshift(item);
-  window.render(data);
+  data.posts.unshift(item);
+  
+  const event = new CustomEvent("update", { detail: data });
+  document.body.dispatchEvent(event);
 
   showAdd = false;
 
