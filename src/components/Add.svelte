@@ -17,16 +17,8 @@ function insertBlock(layout){
   item.body = '';
   item.layout = layout;
 
-
+  item.category = window.category;
   
-   var parts = window.location.pathname.split('/')
-   console.log(parts.length)
-   if(parts.length<3){
-     item.category = "home";
-   }else if(parts.length>2){
-     item.category = parts[1]
-   }
-
   console.log(item);
   data.posts.unshift(item);
   
