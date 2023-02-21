@@ -20,7 +20,8 @@ function insertBlock(layout){
 
   
    var parts = window.location.pathname.split('/')
-   if(parts.length==1){
+   console.log(parts.length)
+   if(parts.length==0 || parts.length==1){
      item.category = "home";
    }else if(parts.length>1){
      item.category = parts[1]
