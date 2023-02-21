@@ -180,7 +180,7 @@ function groupByKey(array, key) {
 {#if cfg.settings && cfg.settings.includes("layouts")}
 
 {#each cfg.layouts as type}
-<div class="tab-{layout} wdgt-tab" style="display: none;">
+<div class="tab-{type} wdgt-tab" style="display: none;">
 
 <h5 class="text-capitalize">{type}</h5>
 
