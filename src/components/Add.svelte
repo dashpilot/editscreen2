@@ -4,7 +4,7 @@ export let showAdd;
 export let data;
 let loading = false;
 
-function insertBlock(layout){
+function insertBlock(type){
 
   let fields = [];
 
@@ -15,7 +15,7 @@ function insertBlock(layout){
   item.id = "item-" + Date.now();
   item.title = 'Lorem Ipsum';
   item.body = '';
-  item.layout = layout;
+  item.type = type;
 
   item.category = window.category;
   

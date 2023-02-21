@@ -5,7 +5,7 @@ import {setTab} from './Helpers.svelte';
 
 export let showSettings;
 export let data;
-let name;
+let title;
 let grouped = false;
 
 afterUpdate (async function() {
@@ -15,12 +15,13 @@ afterUpdate (async function() {
 
 function addCat(){
 	let newCat = {};
-	newCat.name = name;
-	if(name.length < 4){
+	newCat.id = Date.now();
+	newCat.title = title;
+	if(title.length < 4){
 		alert('Title should be at least 4 characters long')
 	}else{
-	newCat.slug = slugify(name);
-	name = '';
+	newCat.slug = slugify(title);
+	title = '';
 	data.categories.push(newCat);
 	data.categories = data.categories;
 	}
@@ -127,7 +128,7 @@ function groupByKey(array, key) {
 <h5 class="text-capitalize">Categories</h5>
 
 <div class="input-group mb-3 mt-3 w-50">
-  <input type="text" class="form-control add-cat" placeholder="Category title" bind:value="{name}">
+  <input type="text" class="form-control add-cat" placeholder="Category title" bind:value="{title}">
   <div class="input-group-append">
     <button class="btn btn-outline-secondary" type="button" on:click="{addCat}">Add</button>
   </div>
@@ -138,9 +139,9 @@ function groupByKey(array, key) {
 		<li class="list-group-item">
 
 {#if item.slug !== 'home'}
-<div class="mt-2 float-left">{item.name}</div>
+<div class="mt-2 float-left">{item.title}</div>
 {:else}
-{item.name}
+{item.title}
 
 
 <button class="btn btn-outline-secondary opacity-0">
