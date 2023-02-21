@@ -19,20 +19,17 @@ function insertBlock(layout){
 
 
   
-    var mycat = window.location.pathname.replace('/', '');
-    if(mycat==''){
-      item.category = 'home';
-    }else{
-      item.category = window.location.pathname.replace('/', '');
-    }
-    
-
+   var parts = window.location.pathname.split('/')
+   if(parts.length==1){
+     item.category = "home";
+   }else if(parts.length>1){
+     item.category = parts[1]
+   }
 
   console.log(item);
   data.posts.unshift(item);
   
-  const event = new CustomEvent("update", { detail: data });
-  document.body.dispatchEvent(event);
+  window.render(data);
 
   showAdd = false;
 
