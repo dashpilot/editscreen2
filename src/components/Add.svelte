@@ -4,6 +4,8 @@ export let showAdd;
 export let data;
 let loading = false;
 
+
+
 function insertBlock(type){
 
   let fields = [];
@@ -25,6 +27,8 @@ function insertBlock(type){
   window.render(data);
 
   showAdd = false;
+  
+
 
 }
 </script>
@@ -42,6 +46,8 @@ function insertBlock(type){
   </div>
 
   <div class="wdgt-content pt-3">
+    
+
 
   {#if cfg.layouts}
     {#if cfg.layoutPreview}
